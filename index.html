@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moedas</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header class="d-flex">
+        <div class="bg-dark h-100 text-white w-100 d-flex align-items-center ps-4">
+            <i class="bi bi-currency-exchange text-white fs-4"></i>
+            <span class="ms-3">Conversor de Moedas</span>
+        </div>
+        <!-- <div class="bg-dark h-100 text-white w-50 d-flex align-items-center pe-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+            </div>
+        </div> -->
+    </header>
+    <section class="">
+        <main class="bg-dark h-100 w-100 text-white d-flex justify-content-center align-items-center">
+            <div class="bg-white w-50 h-75 p-3 rounded">
+                <div class="inputs h-75">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select bg-dark text-white" id="selecionar-1" aria-label="Floating label select example">
+                                  <option selected>Selecione uma moeda</option>
+                                </select>
+                                <label for="selecionar-1 bg-dark">Moeda 1</label>
+                            </div>
+                        </div>
+                        <div role="button" class="col-1 bg-dark rounded d-flex justify-content-center align-items-center" onclick="trocarMoeda();">
+                            <i class="bi bi-arrow-left-right text-white"></i>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating ">
+                                <select class="form-select bg-dark text-white" id="selecionar-2" aria-label="Floating label select example">
+                                  <option selected>Selecione uma moeda</option>
+                                </select>
+                                <label for="selecionar-2 bg-dark">Moeda 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-9">
+                            <input type="text" id="moeda-1" class="form-control w-100" placeholder="Insira um valor. Ex: 120,00">
+                        </div>
+                    </div>
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-9">
+                            <input id="mostrar-valor" type="text" class="form-control w-100" placeholder="" readonly>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-center">
+                        <div class="col-6">
+                            <button class="btn btn-dark w-100 h-100" onclick="converter();">Converter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="opcoes h-25">
+                    <div class="row h-100">
+                        <div class="col d-flex justify-content-evenly h-100 mx-2">
+                            <div role="button" class="opcao d-flex justify-content-center align-items-center bg-dark h-100 px-3 rounded flex-column">
+                                <i class="bi bi-currency-dollar text-white fs-4"></i>
+                                <span class="mt-2">Dólar para Real</span>
+                            </div>
+                            <div role="button" class="opcao d-flex justify-content-center align-items-center bg-dark h-100 px-3 rounded flex-column">
+                                <i class="bi bi-currency-euro text-white fs-4"></i>
+                                <span class="mt-2">Euro para Real</span>
+                            </div>
+                            <div role="button" class="opcao d-flex justify-content-center align-items-center bg-dark h-100 px-3 rounded flex-column">
+                                <i class="bi bi-currency-pound text-white fs-4"></i>
+                                <span class="mt-2">Libra para Real</span>
+                            </div>
+                            <div role="button" class="opcao d-flex justify-content-center align-items-center bg-dark h-100 px-3 rounded flex-column">
+                                <i class="bi bi-currency-bitcoin text-white fs-4"></i>
+                                <span class="mt-2">Bitcoin para Real</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer class="bg-dark"></footer>
+    
+    <script src="/javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
